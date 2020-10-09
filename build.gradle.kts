@@ -1,7 +1,7 @@
 plugins {
     kotlin("multiplatform") version "1.4.10"
-    id("com.android.library")
-    id("kotlin-android-extensions")
+//    id("com.android.library")
+//    id("kotlin-android-extensions")
 }
 group = "com.kamilh"
 version = "1.0-SNAPSHOT"
@@ -13,7 +13,7 @@ repositories {
     mavenCentral()
 }
 kotlin {
-    android()
+//    android()
     iosX64("ios") {
         binaries {
             framework {
@@ -34,12 +34,12 @@ kotlin {
                 implementation(kotlin("test-annotations-common"))
             }
         }
-        val androidMain by getting {
-            dependencies {
-                implementation("androidx.core:core-ktx:1.2.0")
-            }
-        }
-        val androidTest by getting
+//        val androidMain by getting {
+//            dependencies {
+//                implementation("androidx.core:core-ktx:1.2.0")
+//            }
+//        }
+//        val androidTest by getting
         val iosMain by getting
         val iosTest by getting
         val jvmMain by getting
@@ -50,17 +50,17 @@ kotlin {
         }
     }
 }
-android {
-    compileSdkVersion(29)
-    defaultConfig {
-        minSdkVersion(24)
-        targetSdkVersion(29)
-        versionCode = 1
-        versionName = "1.0"
-    }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-        }
-    }
-}
+//android {
+//    compileSdkVersion(29)
+//    defaultConfig {
+//        minSdkVersion(24)
+//        targetSdkVersion(29)
+//        versionCode = 1
+//        versionName = "1.0"
+//    }
+//    buildTypes {
+//        getByName("release") {
+//            isMinifyEnabled = false
+//        }
+//    }
+//}
